@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+  <meta name="theme-color" content="#030712">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>Gimik Perasmian</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="tablet.css">
+</head>
+<body>
+  <main class="stage" id="stage">
+    <div class="ambient" aria-hidden="true"></div>
+
+    <section class="panel" id="scannerScreen" aria-labelledby="title">
+      <p class="eyebrow">SISTEM PENGESAHAN BIOMETRIK</p>
+      <h1 id="title">GIMIK PERASMIAN</h1>
+      <p class="instruction" id="instruction">Letakkan tapak tangan kanan pada pengimbas</p>
+
+      <button class="scanner" id="scanButton" type="button" aria-label="Sentuh tapak tangan kanan untuk mula mengimbas">
+        <span class="rings" aria-hidden="true"></span>
+        <img class="palm-image" src="palm-hand.png" alt="Tapak tangan kanan">
+        <span class="scan-line" aria-hidden="true"></span>
+        <span class="touch-label" id="touchLabel">TAPAK TANGAN KANAN</span>
+      </button>
+
+      <div class="progress-wrap" aria-live="polite">
+        <div class="progress-track"><div class="progress-bar" id="progressBar"></div></div>
+        <div class="progress-row"><span id="statusText">SISTEM SEDIA</span><strong id="progressText">0%</strong></div>
+      </div>
+    </section>
+
+    <section class="success" id="successScreen" aria-hidden="true">
+      <div class="checkmark" aria-hidden="true"><span></span></div>
+      <p class="eyebrow">IDENTITY VERIFIED</p>
+      <h2>GIMIK PERASMIAN<br><em>BERJAYA</em></h2>
+      <p>Majlis kini dirasmikan</p>
+      <button id="resetButton" type="button">ULANG SEMULA</button>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
