@@ -7,7 +7,7 @@ body{overscroll-behavior:none}
   .stage{padding:max(6px,env(safe-area-inset-top)) max(8px,env(safe-area-inset-right)) max(6px,env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-left))}
   .panel{width:100%;height:100%;display:grid;place-items:center}
   .panel>.eyebrow,.panel>h1,.instruction,.touch-label,.progress-wrap{display:none}
-  .scanner{width:min(94vw,88vh);max-width:none;border-width:3px;box-shadow:0 0 0 12px #26d8ff0c,0 0 70px #16c9ff40,inset 0 0 55px #0de1ff28}
+  .scanner{width:min(94vw,88vh);max-width:none;overflow:visible;border-width:3px;box-shadow:0 0 0 12px #26d8ff0c,0 0 70px #16c9ff40,inset 0 0 55px #0de1ff28}
   .palm-image{width:88%;height:88%;filter:drop-shadow(0 0 18px #55efff) saturate(1.2)}
   .scan-line{left:4%;right:4%;top:6%;height:10px;border-radius:999px;background:linear-gradient(180deg,#bfffff 0%,#fff 45%,#14eaff 55%,#33dfff 100%);box-shadow:0 0 8px 2px #fff,0 0 22px 8px #10dfff,0 0 42px 14px #168cff}
   .scanning .scan-line{animation-name:scan-full}
@@ -19,6 +19,9 @@ body{overscroll-behavior:none}
 }
 @media (min-width:1000px) and (orientation:landscape){
   .panel{width:100%}
-  .scanner{width:min(92vh,70vw)}
+  .scanner{width:min(90vh,62vw)}
+  .palm-image{width:92%;height:92%}
+  .success h2{font-size:min(7vw,4.8rem)}
 }
 @keyframes scan-full{0%{top:6%}50%{top:94%}100%{top:6%}}
+
