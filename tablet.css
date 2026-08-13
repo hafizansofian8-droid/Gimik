@@ -3,24 +3,21 @@ html,body,.stage{width:100%;height:100%;min-height:100dvh}
 body{overscroll-behavior:none}
 .stage{cursor:pointer}
 @media (min-width:700px){
-  .stage{padding:max(18px,env(safe-area-inset-top)) max(24px,env(safe-area-inset-right)) max(18px,env(safe-area-inset-bottom)) max(24px,env(safe-area-inset-left))}
-  .panel,.success{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center}
-  .eyebrow{font-size:.9rem}
-  .panel h1{font-size:3.5rem}
-  .instruction{font-size:1.15rem;margin:20px auto 18px}
-  .scanner{width:min(58vh,72vw);max-width:620px;border-width:2px}
-  .touch-label{font-size:.8rem}
-  .progress-wrap{width:500px;margin-top:28px}
-  .progress-track{height:7px}
-  .progress-row{font-size:.8rem}
-  .progress-row strong{font-size:1rem}
+  .stage{padding:max(6px,env(safe-area-inset-top)) max(8px,env(safe-area-inset-right)) max(6px,env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-left))}
+  .panel{width:100%;height:100%;display:grid;place-items:center}
+  .panel>.eyebrow,.panel>h1,.instruction,.touch-label,.progress-wrap{display:none}
+  .scanner{width:min(94vw,88vh);max-width:none;border-width:3px;box-shadow:0 0 0 12px #26d8ff0c,0 0 70px #16c9ff40,inset 0 0 55px #0de1ff28}
+  .palm-image{width:88%;height:88%;filter:drop-shadow(0 0 18px #55efff) saturate(1.2)}
+  .scan-line{left:5%;right:5%;top:6%}
+  .scanning .scan-line{animation-name:scan-full}
+  .success{display:none;width:100%;height:100%;flex-direction:column;align-items:center;justify-content:center}
+  .success.active{display:flex}
   .success .checkmark{width:145px}
   .success h2{font-size:4.6rem}
   .success>p:not(.eyebrow){font-size:1.15rem}
 }
 @media (min-width:1000px) and (orientation:landscape){
   .panel{width:100%}
-  .scanner{width:min(58vh,520px)}
-  .instruction{margin:12px auto}
-  .progress-wrap{margin-top:18px}
+  .scanner{width:min(92vh,70vw)}
 }
+@keyframes scan-full{0%{top:6%}50%{top:94%}100%{top:6%}}
